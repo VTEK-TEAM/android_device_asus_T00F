@@ -283,7 +283,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/asus/T00F/configs/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
 
-$(call inherit-product-if-exists, vendor/asus/T00F/T00F-vendor.mk)
+$(call inherit-product, vendor/asus/T00F/T00F-vendor.mk)
 
 # Intel_updater
 PRODUCT_PACKAGES += \
