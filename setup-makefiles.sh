@@ -17,7 +17,7 @@
 #
 
 set -e
-export DEVICE=Z00D
+export DEVICE=T00F
 export VENDOR=asus
 
 INITIAL_COPYRIGHT_YEAR=2015

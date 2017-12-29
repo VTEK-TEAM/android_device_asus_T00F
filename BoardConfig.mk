@@ -23,18 +23,14 @@ TARGET_CPU_ABI_LIST_32_BIT := x86,armeabi-v7a,armeabi
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := x86_64-linux-android-
 TARGET_BOARD_PLATFORM := clovertrail
 TARGET_BOOTLOADER_BOARD_NAME := clovertrail
-TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_USERIMAGES_USE_F2FS := true
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 TARGET_OTA_ASSERT_DEVICE := T00F,T00F1,T00G,T00J,T00J1,ASUS_T00J,ASUS_T00G,ASUS_T00F,a600cg,a500cg,a501cg
 
 # Specific headers
 TARGET_BOARD_KERNEL_HEADERS := device/asus/T00F/kernel-headers
 TARGET_SPECIFIC_HEADER_PATH := device/asus/T00F/include
-
+TARGET_SYSTEM_PROP += device/asus/T00F/system.prop
 TARGET_DROIDBOOT_LIBS := libintel_droidboot
-
-TARGET_RELEASETOOL_MAKE_RECOVERY_PATCH_SCRIPT := ./device/asus/Z00D/make_recovery_patch
 
 # OTA Packaging / Bootimg creation
 BOARD_CUSTOM_MKBOOTIMG := pack_intel
@@ -48,11 +44,7 @@ TARGET_KERNEL_SOURCE := kernel/asus/T00F
 TARGET_KERNEL_ARCH := x86
 BOARD_KERNEL_IMAGE_NAME := bzImage
 TARGET_KERNEL_CONFIG := lineage_T00F_defconfig
-
 BOARD_KERNEL_CMDLINE := init=/init pci=noearly console=ttyS0 console=logk0 earlyprintk=nologger bootup.uart=0 loglevel=8 kmemleak=off androidboot.selinux=permissive androidboot.bootmedia=sdcard androidboot.hardware=redhookbay watchdog.watchdog_thresh=60 androidboot.spid=xxxx:xxxx:xxxx:xxxx:xxxx:xxxx androidboot.serialno=01234567890123456789 ip=50.0.0.2:50.0.0.1::255.255.255.0::usb0:on vmalloc=172M
-
-TARGET_RECOVERY_UPDATER_LIBS += libosip_updater
-TARGET_RECOVERY_UPDATER_EXTRA_LIBS += libintel_updater liboempartitioning_static
 
 # Adb
 BOARD_FUNCTIONFS_HAS_SS_COUNT := true
@@ -139,6 +131,8 @@ BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 1
 BOARD_GLOBAL_CFLAGS += -DGFX_BUF_EXT
 
 # Partitions
+TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 1677721600
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -157,12 +151,11 @@ BOARD_PROVIDES_LIBRIL := true
 TARGET_NO_TWO_STEP_RECOVERY := true
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 BOARD_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
-
+TARGET_RELEASETOOL_MAKE_RECOVERY_PATCH_SCRIPT := ./device/asus/T00F/make_recovery_patch
 TARGET_RECOVERY_FSTAB := device/asus/T00F/rootdir/etc/fstab.redhookbay
 TARGET_RECOVERY_DEVICE_MODULES := libinit_ctp librecovery_updater_ctp intel_prop thermald upi_ug31xx
-# Security
-BUILD_WITH_SECURITY_FRAMEWORK := chaabi_token
-BUILD_WITH_CHAABI_SUPPORT := true
+TARGET_RECOVERY_UPDATER_LIBS += libosip_updater
+TARGET_RECOVERY_UPDATER_EXTRA_LIBS += libintel_updater liboempartitioning_static
 
 # SELinux
 BOARD_SEPOLICY_DIRS += device/asus/T00F/sepolicy
