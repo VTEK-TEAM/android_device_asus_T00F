@@ -73,11 +73,12 @@ WITH_CM_CHARGER := false
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_HEALTHD_CUSTOM_CHARGER_RES := device/asus/T00F/charger/images
 
-# Dex-preoptimization: Speeds up initial boot (if we ever o a user build, which we don't)
+# Dex-preoptimization
 ifeq ($(HOST_OS),linux)
-  ifeq ($(TARGET_BUILD_VARIANT),user)
+  ifneq ($(TARGET_BUILD_VARIANT),eng)
     ifeq ($(WITH_DEXPREOPT),)
       WITH_DEXPREOPT := true
+      WITH_DEXPREOPT_BOOT_IMG_ONLY := true
     endif
   endif
 endif
