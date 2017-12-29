@@ -16,6 +16,7 @@ allow system_server radio_device:chr_file w_file_perms;
 allow system_server system_file:file execmod;
 
 #unix_socket_connect(system_server, sensorhubd, sensorhubd)
+allow system_server sysfs_touchscreen:file rw_file_perms;
 
 # Access /dev/mdm
 allow system_server radio_device:chr_file r_file_perms;
