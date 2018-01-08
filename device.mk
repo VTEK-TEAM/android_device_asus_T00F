@@ -315,6 +315,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/asus/T00F/audio/silence.wav:system/etc/silence.wav
 
+# Default OMX service to non-Treble
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.media.treble_omx=false
+
 # Add WiFi Firmware
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4339/device-bcm.mk)
 
