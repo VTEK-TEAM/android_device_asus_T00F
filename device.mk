@@ -82,6 +82,10 @@ PRODUCT_PACKAGES += \
     pvr_drv_video \
     libgbf
 
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.mapper@2.0-impl
+
 # Flip Cover App
 PRODUCT_PACKAGES += \
     FlipFlap
@@ -320,6 +324,10 @@ PRODUCT_COPY_FILES += \
 # Default OMX service to non-Treble
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.media.treble_omx=false
+    
+# Vendor Interface Manifest
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/manifest.xml:system/vendor/manifest.xml    
 
 # Add WiFi Firmware
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4339/device-bcm.mk)
