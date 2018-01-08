@@ -77,10 +77,6 @@ PRODUCT_PACKAGES += \
     pvr_drv_video \
     libgbf
 
-# Doze
-PRODUCT_PACKAGES += \
-   ZenfoneDoze
-
 # Flip Cover App
 PRODUCT_PACKAGES += \
     FlipFlap
