@@ -162,6 +162,9 @@ TARGET_RECOVERY_UPDATER_EXTRA_LIBS += libintel_updater liboempartitioning_static
 # SELinux
 BOARD_SEPOLICY_DIRS += device/asus/T00F/sepolicy
 
+# Vendor Interface Manifest
+DEVICE_MANIFEST_FILE := device/asus/T00F/manifest.xml
+
 # DT2W
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/pci0000:00/0000:00:00.3/i2c-0/0-0020/input/input1/dclick_mode"
 

@@ -324,11 +324,7 @@ PRODUCT_COPY_FILES += \
 
 # Default OMX service to non-Treble
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.media.treble_omx=false
-    
-# Vendor Interface Manifest
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/manifest.xml:system/vendor/manifest.xml    
+    persist.media.treble_omx=false  
 
 # Add WiFi Firmware
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4339/device-bcm.mk)
