@@ -285,6 +285,7 @@ PRODUCT_PACKAGES += \
     hostapd \
     dhcpcd.conf \
     wificond \
+    wifilogd \
     wpa_supplicant \
     wpa_supplicant.conf
 
