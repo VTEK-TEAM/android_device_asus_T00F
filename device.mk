@@ -313,6 +313,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.sys.perf.device.full=1633000 \
     ro.sys.perf.device.touchboost=1330000
 
+# RenderScript HAL
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
+
 # Alsa
 PRODUCT_PACKAGES += \
     tinyplay \
