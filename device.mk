@@ -63,6 +63,8 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    android.hardware.camera.provider@2.4-impl \
+    camera.device@3.2-impl \
     bspcapability \
     camera.redhookbay \
     libshim_camera \
@@ -101,6 +103,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FlipFlap
 
+# GNSS HAL
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl
+ 
 # GPS
 PRODUCT_PACKAGES += \
     libshim_gps
@@ -151,6 +157,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-impl \
     lights.clovertrail
 
 # Media
@@ -255,6 +262,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl \
     libshim_sensors
 
 PRODUCT_COPY_FILES += \
@@ -336,6 +344,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 # RenderScript HAL
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
+
+# USB HAL
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
 
 # Alsa
 PRODUCT_PACKAGES += \
