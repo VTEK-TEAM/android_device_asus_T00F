@@ -265,6 +265,7 @@ vendor/firmware/00ov8830-0-0x2-0.drvb
 vendor/firmware/01s5k8aay.drvb
 
 # DRM
+lib/libion.so
 lib/libkeymaster.so
 lib/libdrmdecrypt.so
 lib/hw/keystore.clovertrail.so:lib/hw/keystore.vendor.clovertrail.so
