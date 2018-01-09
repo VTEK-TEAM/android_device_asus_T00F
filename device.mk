@@ -32,6 +32,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # Audio
 PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@2.0-impl \
     libshim_audio \
     libtinycompress \
     libtinyalsa \
