@@ -132,6 +132,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     keystore.clovertrail
 
+# libion
+PRODUCT_PACKAGES += \
+    libion
+
 # Lights
 PRODUCT_PACKAGES += \
     lights.clovertrail
