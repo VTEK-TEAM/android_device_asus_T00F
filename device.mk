@@ -22,6 +22,9 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-2048-dalvi
 DEVICE_PACKAGE_OVERLAYS := \
     device/asus/T00F/overlay
 
+PRODUCT_ENFORCE_RRO_TARGETS := \
+    framework-res
+
 # Art
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-swap=false
