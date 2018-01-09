@@ -256,10 +256,6 @@ PRODUCT_PACKAGES += \
     init.compass.rc \
     init.wireless.rc
 
-# Stlport
-PRODUCT_PACKAGES += \
-    libstlport
-
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
