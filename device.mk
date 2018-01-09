@@ -266,6 +266,7 @@ PRODUCT_PACKAGES += \
     libshim_sensors
 
 PRODUCT_COPY_FILES += \
+    device/asus/T00F/configs/sensors/_hals.conf:system/vendor/etc/sensors/_hals.conf \
     device/asus/T00F/configs/sensor_hal_config_default.xml:system/etc/sensor_hal_config_default.xml \
     device/asus/T00F/configs/sensor_hal_config_general_default.xml:system/etc/sensor_hal_config_general_default.xml \
     device/asus/T00F/configs/sensor_hal_config_general_scale-pr1.xml:system/etc/sensor_hal_config_general_scale-pr1.xml \
